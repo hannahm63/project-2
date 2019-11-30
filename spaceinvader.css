@@ -1,0 +1,691 @@
+.demo {
+    margin: 10px;
+    padding: 10px;
+    max-width: 800px;
+    height: 200px;
+    background-color: #000;
+  }
+  .space {
+    float: left;
+    color: #fff;
+    width: 260px;
+  }
+  .space>span {
+    margin-left: 20px;
+  }
+  .space-invader-1 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 400px 400px;
+    position: absolute;
+  }
+  .space-invader-2 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 800px 150px;
+    position: absolute;
+  }
+  .space-invader-3 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 1200px 300px 0px 300px;
+    position: absolute;
+  }
+
+  .space-invader-4 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 1600px 150px 0px 150px;
+    position: absolute;
+  }
+  .space-invader-5 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 2000px 300px 0px 300px;
+    position: absolute;
+  }
+  .space-invader-6 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 2100px 600px 0px 600px;
+    position: absolute;
+  }
+  .space-invader-7 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 400px 1200px 0px 1200px;
+    position: absolute;
+  }
+  .space-invader-8 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 800px 1400px 0px 1400px;
+    position: absolute;
+  }
+  .space-invader-9 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 1200px 1200px 0px 1200px;
+    position: absolute;
+  }
+  .space-invader-10 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 1600px 1400px 0px 1400px;
+    position: absolute;
+  }
+  .space-invader-11 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 2000px 1200px 0px 1200px;
+    position: absolute;
+  }
+  .space-invader-12 { 
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 2100px 1000px 20px 1000px;
+    position: absolute;
+  } 
+  .space-invader-defender {
+    box-shadow: 
+      0 0 0 .25em #fff,
+      .625em 0 0 .25em #fff,
+      -.625em 0 0 .25em #fff,
+      1em .0625em 0 .1875em #fff,
+      -1em .0625em 0 .1875em #fff,
+      0 -.25em 0 .25em #fff,
+      0 -.625em 0 0 #fff;
+  }
+ 
+  .space-invader-1, .space-invader-4, .space-invader-7, .space-invader-10 {
+    box-shadow:
+      0 0 0 .25em #fff,
+      0 .25em 0 .25em #fff,
+      -.625em .375em 0 .125em #fff,
+      .625em .375em 0 .125em #fff,
+      -.75em -.75em 0 0 #fff,
+      .75em -.75em 0 0 #fff,
+      -.5em -.5em 0 0 #fff,
+      .5em -.5em 0 0 #fff,
+      -.75em -.25em 0 0 #fff,
+      -.5em -.25em 0 0 #fff,
+      .5em -.25em 0 0 #fff,
+      .75em -.25em 0 0 #fff,
+      -1em 0 0 0 #fff,
+      -.75em 0 0 0 #fff,
+      .75em 0 0 0 #fff,
+      1em 0 0 0 #fff,
+      -1em .25em 0 0 #fff,
+      1em .25em 0 0 #fff,
+      -.75em .75em 0 0 #fff,
+      .75em .75em 0 0 #fff,
+      /* Left Arm */
+      1.25em .25em 0 0 #fff,
+      1.25em .5em 0 0 #fff,
+      1.25em .75em 0 0 #fff,
+      /* Right Arm */
+      -1.25em .25em 0 0 #fff,
+      -1.25em .5em 0 0 #fff,
+      -1.25em .75em 0 0 #fff,
+      /* Left Foot */
+      -.25em 1em 0 0 #fff,
+      -.5em 1em 0 0 #fff,
+      /* Right Foot */
+      .25em 1em 0 0 #fff,
+      .5em 1em 0 0 #fff;
+  }
+  .space-invader-2, .space-invader-5, .space-invader-8, .space-invader-11 { 
+    box-shadow: 
+      /* Body */
+      -.125em -.5em 0 .25em #fff,
+      .125em -.5em 0 .25em #fff,
+      -.75em -.375em 0 .125em #fff,
+      -.875em -.375em 0 .125em #fff,
+      .75em -.375em 0 .125em #fff,
+      .875em -.375em 0 .125em #fff,
+      -1em 0 0 .25em #fff,
+      1em 0 0 .25em #fff,
+      -.5em .25em 0 0 #fff,
+      -.25em .25em 0 0 #fff,
+      0 .25em 0 0 #fff,
+      .25em .25em 0 0 #fff,
+      .5em .25em 0 0 #fff,
+      /* Crotch */
+      .3125em .5em 0 0 #fff,
+      .5em .5em 0 0 #fff,
+      .5em .5em 0 0 #fff,
+      -.3125em .5em 0 0 #fff,
+      -.5em .5em 0 0 #fff,
+      -.5em .5em 0 0 #fff,
+      .0625em .75em 0 0 #fff,
+      -.0625em .75em 0 0 #fff,
+      /* Right Leg */
+      -.625em .75em 0 0 #fff,
+      -.8125em .75em 0 0 #fff,
+      -1.0625em 1em 0 0 #fff,
+      -1.25em 1em 0 0 #fff,
+      /* Left Leg */
+      .625em .75em 0 0 #fff,
+      .8125em .75em 0 0 #fff,
+      1.0625em 1em 0 0 #fff,
+      1.25em 1em 0 0 #fff;
+  }
+  .space-invader-3, .space-invader-6, .space-invader-9, .space-invader-12 { 
+    box-shadow: 
+      /* Body */
+      0 -.625em 0 .125em #fff,
+      -.25em -.375em 0 .125em #fff,
+      .25em -.375em 0 .125em #fff,
+      .625em -.25em 0 0 #fff,
+      -.625em -.25em 0 0 #fff,
+      0 .125em 0 .125em #fff,
+      -.75em .125em 0 .125em #fff,
+      .75em .125em 0 .125em #fff,
+      .375em .25em 0 0 #fff,
+      -.375em .25em 0 0 #fff,
+      /* Crotch */
+      .125em .5em 0 0 #fff,
+      -.125em .5em 0 0 #fff,
+      /* Right Leg */
+      -.625em .5em 0 0 #fff,
+      -.875em .75em 0 0 #fff,
+      -.625em 1em 0 0 #fff,
+      -.625em 1em 0 0 #fff,
+      /* Left Leg */
+      .625em .5em 0 0 #fff,
+      .875em .75em 0 0 #fff,
+      .625em 1em 0 0 #fff,
+      .625em 1em 0 0 #fff;
+  }
+  
+  .space-invader.animate { 
+    animation: 1s infinite;
+  }
+  .space-invader.classic { 
+    animation: 1s step-end infinite;
+  }
+  
+  .space-invader-1.classic, .space-invader-4.classic, 
+  .space-invader-7.classic, .space-invader-10.classic { 
+    animation-name: space-invader-1;
+  }
+  .space-invader-2.animate,
+  .space-invader-2.classic, .space-invader-5.classic, 
+  .space-invader-8.classic, .space-invader-11.classic { 
+    animation-name: space-invader-2;
+  }
+  .space-invader-3.animate,
+  .space-invader-3.classic, .space-invader-6.classic, 
+  .space-invader-9.classic, .space-invader-12.classic { 
+    animation-name: space-invader-3;
+  }
+  
+  @keyframes space-invader-1 {
+    50% {
+      box-shadow: 
+        0 0 0 .25em #fff,
+        0 .25em 0 .25em #fff,
+        -.625em .375em 0 .125em #fff,
+        .625em .375em 0 .125em #fff,
+        -.75em -.75em 0 0 #fff,
+        .75em -.75em 0 0 #fff,
+        -.5em -.5em 0 0 #fff,
+        .5em -.5em 0 0 #fff,
+        -.75em -.25em 0 0 #fff,
+        -.5em -.25em 0 0 #fff,
+        .5em -.25em 0 0 #fff,
+        .75em -.25em 0 0 #fff,
+        -1em 0 0 0 #fff,
+        -.75em 0 0 0 #fff,
+        .75em 0 0 0 #fff,
+        1em 0 0 0 #fff,
+        -1em .25em 0 0 #fff,
+        1em .25em 0 0 #fff,
+        -.75em .75em 0 0 #fff,
+        .75em .75em 0 0 #fff,
+        /* Left Arm */
+        1.25em 0 0 0 #fff,
+        1.25em -.25em 0 0 #fff,
+        1.25em -.5em 0 0 #fff,
+        /* Right Arm */
+        -1.25em 0 0 0 #fff, 
+        -1.25em -.25em 0 0 #fff, 
+        -1.25em -.5em 0 0 #fff, 
+        /* Left Foot */
+        -1em 1em 0 0 #fff, 
+        -1em 1em 0 0 #fff, 
+        /* Right Foot */
+        1em 1em 0 0 #fff, 
+        1em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-2 {
+    50% {
+      box-shadow: 
+        /* Body */
+        -.125em -.5em 0 .25em #fff,
+        .125em -.5em 0 .25em #fff,
+        -.75em -.375em 0 .125em #fff,
+        -.875em -.375em 0 .125em #fff,
+        .75em -.375em 0 .125em #fff,
+        .875em -.375em 0 .125em #fff,
+        -1em 0 0 .25em #fff,
+        1em 0 0 .25em #fff,
+        -.5em .25em 0 0 #fff,
+        -.25em .25em 0 0 #fff,
+        0 .25em 0 0 #fff,
+        .25em .25em 0 0 #fff,
+        .5em .25em 0 0 #fff,
+        /* Crotch */
+        .3125em .5em 0 0 #fff,
+        .5em .5em 0 0 #fff,
+        .625em .5em 0 0 #fff,
+        -.3125em .5em 0 0 #fff,
+        -.5em .5em 0 0 #fff,
+        -.625em .5em 0 0 #fff,
+        .0625em .75em 0 0 #fff,
+        -.0625em .75em 0 0 #fff,
+        /* Right Leg */
+        -.75em .75em 0 0 #fff,
+        -.9375em .75em 0 0 #fff,
+        -.75em 1em 0 0 #fff,
+        -.5em 1em 0 0 #fff,
+        /* Left Leg */
+        .75em .75em 0 0 #fff,
+        .9375em .75em 0 0 #fff,
+        .75em 1em 0 0 #fff,
+        .5em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-3 {
+    50% {
+      box-shadow: 
+      /* Body */
+      0 -.625em 0 .125em #fff,
+      -.25em -.375em 0 .125em #fff,
+      .25em -.375em 0 .125em #fff,
+      .625em -.25em 0 0 #fff,
+      -.625em -.25em 0 0 #fff,
+      0 .125em 0 .125em #fff,
+      -.75em .125em 0 .125em #fff,
+      .75em .125em 0 .125em #fff,
+      .375em .25em 0 0 #fff,
+      -.375em .25em 0 0 #fff,
+        /* Crotch */
+      .125em .5em 0 0 #fff,
+      -.125em .5em 0 0 #fff,
+        /* Right Leg */
+        -.375em .5em 0 0 #fff,
+        -.625em .75em 0 0 #fff,
+        -.875em 1em 0 0 #fff,
+        -.375em 1em 0 0 #fff,
+        /* Left Leg */
+        .375em .5em 0 0 #fff,
+        .625em .75em 0 0 #fff,
+        .875em 1em 0 0 #fff,
+        .375em 1em 0 0 #fff;
+    }
+  }
+
+  @keyframes space-invader-4 {
+    50% {
+      box-shadow: 
+        0 0 0 .25em #fff,
+        0 .25em 0 .25em #fff,
+        -.625em .375em 0 .125em #fff,
+        .625em .375em 0 .125em #fff,
+        -.75em -.75em 0 0 #fff,
+        .75em -.75em 0 0 #fff,
+        -.5em -.5em 0 0 #fff,
+        .5em -.5em 0 0 #fff,
+        -.75em -.25em 0 0 #fff,
+        -.5em -.25em 0 0 #fff,
+        .5em -.25em 0 0 #fff,
+        .75em -.25em 0 0 #fff,
+        -1em 0 0 0 #fff,
+        -.75em 0 0 0 #fff,
+        .75em 0 0 0 #fff,
+        1em 0 0 0 #fff,
+        -1em .25em 0 0 #fff,
+        1em .25em 0 0 #fff,
+        -.75em .75em 0 0 #fff,
+        .75em .75em 0 0 #fff,
+        /* Left Arm */
+        1.25em 0 0 0 #fff,
+        1.25em -.25em 0 0 #fff,
+        1.25em -.5em 0 0 #fff,
+        /* Right Arm */
+        -1.25em 0 0 0 #fff, 
+        -1.25em -.25em 0 0 #fff, 
+        -1.25em -.5em 0 0 #fff, 
+        /* Left Foot */
+        -1em 1em 0 0 #fff, 
+        -1em 1em 0 0 #fff, 
+        /* Right Foot */
+        1em 1em 0 0 #fff, 
+        1em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-5 {
+    50% {
+      box-shadow: 
+        /* Body */
+        -.125em -.5em 0 .25em #fff,
+        .125em -.5em 0 .25em #fff,
+        -.75em -.375em 0 .125em #fff,
+        -.875em -.375em 0 .125em #fff,
+        .75em -.375em 0 .125em #fff,
+        .875em -.375em 0 .125em #fff,
+        -1em 0 0 .25em #fff,
+        1em 0 0 .25em #fff,
+        -.5em .25em 0 0 #fff,
+        -.25em .25em 0 0 #fff,
+        0 .25em 0 0 #fff,
+        .25em .25em 0 0 #fff,
+        .5em .25em 0 0 #fff,
+        /* Crotch */
+        .3125em .5em 0 0 #fff,
+        .5em .5em 0 0 #fff,
+        .625em .5em 0 0 #fff,
+        -.3125em .5em 0 0 #fff,
+        -.5em .5em 0 0 #fff,
+        -.625em .5em 0 0 #fff,
+        .0625em .75em 0 0 #fff,
+        -.0625em .75em 0 0 #fff,
+        /* Right Leg */
+        -.75em .75em 0 0 #fff,
+        -.9375em .75em 0 0 #fff,
+        -.75em 1em 0 0 #fff,
+        -.5em 1em 0 0 #fff,
+        /* Left Leg */
+        .75em .75em 0 0 #fff,
+        .9375em .75em 0 0 #fff,
+        .75em 1em 0 0 #fff,
+        .5em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-6 {
+    50% {
+      box-shadow: 
+      /* Body */
+      0 -.625em 0 .125em #fff,
+      -.25em -.375em 0 .125em #fff,
+      .25em -.375em 0 .125em #fff,
+      .625em -.25em 0 0 #fff,
+      -.625em -.25em 0 0 #fff,
+      0 .125em 0 .125em #fff,
+      -.75em .125em 0 .125em #fff,
+      .75em .125em 0 .125em #fff,
+      .375em .25em 0 0 #fff,
+      -.375em .25em 0 0 #fff,
+        /* Crotch */
+      .125em .5em 0 0 #fff,
+      -.125em .5em 0 0 #fff,
+        /* Right Leg */
+        -.375em .5em 0 0 #fff,
+        -.625em .75em 0 0 #fff,
+        -.875em 1em 0 0 #fff,
+        -.375em 1em 0 0 #fff,
+        /* Left Leg */
+        .375em .5em 0 0 #fff,
+        .625em .75em 0 0 #fff,
+        .875em 1em 0 0 #fff,
+        .375em 1em 0 0 #fff;
+    }
+  }
+  @keyframes space-invader-7 {
+    50% {
+      box-shadow: 
+        0 0 0 .25em #fff,
+        0 .25em 0 .25em #fff,
+        -.625em .375em 0 .125em #fff,
+        .625em .375em 0 .125em #fff,
+        -.75em -.75em 0 0 #fff,
+        .75em -.75em 0 0 #fff,
+        -.5em -.5em 0 0 #fff,
+        .5em -.5em 0 0 #fff,
+        -.75em -.25em 0 0 #fff,
+        -.5em -.25em 0 0 #fff,
+        .5em -.25em 0 0 #fff,
+        .75em -.25em 0 0 #fff,
+        -1em 0 0 0 #fff,
+        -.75em 0 0 0 #fff,
+        .75em 0 0 0 #fff,
+        1em 0 0 0 #fff,
+        -1em .25em 0 0 #fff,
+        1em .25em 0 0 #fff,
+        -.75em .75em 0 0 #fff,
+        .75em .75em 0 0 #fff,
+        /* Left Arm */
+        1.25em 0 0 0 #fff,
+        1.25em -.25em 0 0 #fff,
+        1.25em -.5em 0 0 #fff,
+        /* Right Arm */
+        -1.25em 0 0 0 #fff, 
+        -1.25em -.25em 0 0 #fff, 
+        -1.25em -.5em 0 0 #fff, 
+        /* Left Foot */
+        -1em 1em 0 0 #fff, 
+        -1em 1em 0 0 #fff, 
+        /* Right Foot */
+        1em 1em 0 0 #fff, 
+        1em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-8 {
+    50% {
+      box-shadow: 
+        /* Body */
+        -.125em -.5em 0 .25em #fff,
+        .125em -.5em 0 .25em #fff,
+        -.75em -.375em 0 .125em #fff,
+        -.875em -.375em 0 .125em #fff,
+        .75em -.375em 0 .125em #fff,
+        .875em -.375em 0 .125em #fff,
+        -1em 0 0 .25em #fff,
+        1em 0 0 .25em #fff,
+        -.5em .25em 0 0 #fff,
+        -.25em .25em 0 0 #fff,
+        0 .25em 0 0 #fff,
+        .25em .25em 0 0 #fff,
+        .5em .25em 0 0 #fff,
+        /* Crotch */
+        .3125em .5em 0 0 #fff,
+        .5em .5em 0 0 #fff,
+        .625em .5em 0 0 #fff,
+        -.3125em .5em 0 0 #fff,
+        -.5em .5em 0 0 #fff,
+        -.625em .5em 0 0 #fff,
+        .0625em .75em 0 0 #fff,
+        -.0625em .75em 0 0 #fff,
+        /* Right Leg */
+        -.75em .75em 0 0 #fff,
+        -.9375em .75em 0 0 #fff,
+        -.75em 1em 0 0 #fff,
+        -.5em 1em 0 0 #fff,
+        /* Left Leg */
+        .75em .75em 0 0 #fff,
+        .9375em .75em 0 0 #fff,
+        .75em 1em 0 0 #fff,
+        .5em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-9 {
+    50% {
+      box-shadow: 
+      /* Body */
+      0 -.625em 0 .125em #fff,
+      -.25em -.375em 0 .125em #fff,
+      .25em -.375em 0 .125em #fff,
+      .625em -.25em 0 0 #fff,
+      -.625em -.25em 0 0 #fff,
+      0 .125em 0 .125em #fff,
+      -.75em .125em 0 .125em #fff,
+      .75em .125em 0 .125em #fff,
+      .375em .25em 0 0 #fff,
+      -.375em .25em 0 0 #fff,
+        /* Crotch */
+      .125em .5em 0 0 #fff,
+      -.125em .5em 0 0 #fff,
+        /* Right Leg */
+        -.375em .5em 0 0 #fff,
+        -.625em .75em 0 0 #fff,
+        -.875em 1em 0 0 #fff,
+        -.375em 1em 0 0 #fff,
+        /* Left Leg */
+        .375em .5em 0 0 #fff,
+        .625em .75em 0 0 #fff,
+        .875em 1em 0 0 #fff,
+        .375em 1em 0 0 #fff;
+    }
+  }
+  @keyframes space-invader-10 {
+    50% {
+      box-shadow: 
+        0 0 0 .25em #fff,
+        0 .25em 0 .25em #fff,
+        -.625em .375em 0 .125em #fff,
+        .625em .375em 0 .125em #fff,
+        -.75em -.75em 0 0 #fff,
+        .75em -.75em 0 0 #fff,
+        -.5em -.5em 0 0 #fff,
+        .5em -.5em 0 0 #fff,
+        -.75em -.25em 0 0 #fff,
+        -.5em -.25em 0 0 #fff,
+        .5em -.25em 0 0 #fff,
+        .75em -.25em 0 0 #fff,
+        -1em 0 0 0 #fff,
+        -.75em 0 0 0 #fff,
+        .75em 0 0 0 #fff,
+        1em 0 0 0 #fff,
+        -1em .25em 0 0 #fff,
+        1em .25em 0 0 #fff,
+        -.75em .75em 0 0 #fff,
+        .75em .75em 0 0 #fff,
+        /* Left Arm */
+        1.25em 0 0 0 #fff,
+        1.25em -.25em 0 0 #fff,
+        1.25em -.5em 0 0 #fff,
+        /* Right Arm */
+        -1.25em 0 0 0 #fff, 
+        -1.25em -.25em 0 0 #fff, 
+        -1.25em -.5em 0 0 #fff, 
+        /* Left Foot */
+        -1em 1em 0 0 #fff, 
+        -1em 1em 0 0 #fff, 
+        /* Right Foot */
+        1em 1em 0 0 #fff, 
+        1em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-11 {
+    50% {
+      box-shadow: 
+        /* Body */
+        -.125em -.5em 0 .25em #fff,
+        .125em -.5em 0 .25em #fff,
+        -.75em -.375em 0 .125em #fff,
+        -.875em -.375em 0 .125em #fff,
+        .75em -.375em 0 .125em #fff,
+        .875em -.375em 0 .125em #fff,
+        -1em 0 0 .25em #fff,
+        1em 0 0 .25em #fff,
+        -.5em .25em 0 0 #fff,
+        -.25em .25em 0 0 #fff,
+        0 .25em 0 0 #fff,
+        .25em .25em 0 0 #fff,
+        .5em .25em 0 0 #fff,
+        /* Crotch */
+        .3125em .5em 0 0 #fff,
+        .5em .5em 0 0 #fff,
+        .625em .5em 0 0 #fff,
+        -.3125em .5em 0 0 #fff,
+        -.5em .5em 0 0 #fff,
+        -.625em .5em 0 0 #fff,
+        .0625em .75em 0 0 #fff,
+        -.0625em .75em 0 0 #fff,
+        /* Right Leg */
+        -.75em .75em 0 0 #fff,
+        -.9375em .75em 0 0 #fff,
+        -.75em 1em 0 0 #fff,
+        -.5em 1em 0 0 #fff,
+        /* Left Leg */
+        .75em .75em 0 0 #fff,
+        .9375em .75em 0 0 #fff,
+        .75em 1em 0 0 #fff,
+        .5em 1em 0 0 #fff;
+    }
+  }
+  
+  @keyframes space-invader-12 {
+    50% {
+      box-shadow: 
+      /* Body */
+      0 -.625em 0 .125em #fff,
+      -.25em -.375em 0 .125em #fff,
+      .25em -.375em 0 .125em #fff,
+      .625em -.25em 0 0 #fff,
+      -.625em -.25em 0 0 #fff,
+      0 .125em 0 .125em #fff,
+      -.75em .125em 0 .125em #fff,
+      .75em .125em 0 .125em #fff,
+      .375em .25em 0 0 #fff,
+      -.375em .25em 0 0 #fff,
+        /* Crotch */
+      .125em .5em 0 0 #fff,
+      -.125em .5em 0 0 #fff,
+        /* Right Leg */
+        -.375em .5em 0 0 #fff,
+        -.625em .75em 0 0 #fff,
+        -.875em 1em 0 0 #fff,
+        -.375em 1em 0 0 #fff,
+        /* Left Leg */
+        .375em .5em 0 0 #fff,
+        .625em .75em 0 0 #fff,
+        .875em 1em 0 0 #fff,
+        .375em 1em 0 0 #fff;
+    }
+  }
