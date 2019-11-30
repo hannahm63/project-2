@@ -1,0 +1,99 @@
+html, form {
+  background: #333;
+  height: 100%;
+  width: 100%;
+}
+
+.svg-wrapper {
+  height: 40px;
+    margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+
+}
+
+.text {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 24px;
+  position: relative;
+  top: -40px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 440;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 3px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+.logo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 72px;
+    font-family: 'Black Ops One', cursive;
+
+}
+#game_input {
+    font-size: 32px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Roboto Condensed';
+}
+
+.gamesRow{
+    margin-top: 110px;
+    background: white;
+    height: 300px;
+    width: 540px;
+}
+
+.gamesRowLast{
+    background: white;
+    height: 300px;
+    width: 540px;
+    margin-top: 110px;
+    margin-bottom: 100px;
+}
+
+button { background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
