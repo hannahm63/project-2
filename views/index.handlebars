@@ -1,33 +1,49 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+<section class="intro pt-1" id="intro">
+
+  <div class="space-invader space-invader-1 classic"></div>
+  <div class="space-invader space-invader-2 classic"></div>
+  <div class="space-invader space-invader-3 classic"></div>
+  <div class="space-invader space-invader-4 classic"></div>
+  <div class="space-invader space-invader-5 classic"></div>
+  <div class="space-invader space-invader-6 classic"></div>
+
+  <div class="space-invader space-invader-7 classic"></div>
+  <div class="space-invader space-invader-8 classic"></div>
+  <div class="space-invader space-invader-9 classic"></div>
+  <div class="space-invader space-invader-10 classic"></div>
+  <div class="space-invader space-invader-11 classic"></div>
+  <div class="space-invader space-invader-12 classic"></div>
+
+  <form>
+    <div class="container text-center pt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3  pt-5">
+          <div class="form-group text-light">
+            <label for="game_input" class="logo">GameOn <i class="fas fa-gamepad"></i></label>
+            <input class="form-control" type="text" id="game_input" placeholder="Game to review">
+
+            <div class="svg-wrapper">
+              <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="60" width="320" />
+              </svg>
+              <Button class="text" id="main_search">SEARCH</button>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000" class="gamesRow"></div>
+            <div data-aos="flip-left" class="gamesRow"></div>
+            <div data-aos="fade-down-left" class="gamesRow"></div>
+            <div data-aos="flip-left" class="gamesRowLast"></div>
+
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </form>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+</section>
+
+<script>
+  AOS.init();
+</script>
+
+<script type="module" src="./"></script>
