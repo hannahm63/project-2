@@ -8,6 +8,8 @@ $(document).ready(function() {
 
     console.log(game);
 
+    window.location.href = `/games/${game}`;
+
     if (game) {
       $("#intro").fadeOut("slow", function() {
         //find both queries here with a function:
