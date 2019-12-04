@@ -1,15 +1,14 @@
-// what should I be using besides const here?
 const axios = require("axios");
 
 const chxCoop = {
-  seachGames(apiKey, userInput) {
+  seachGames(userInput, cb) {
     axios({
       method: "GET",
       url: "https://chicken-coop.p.rapidapi.com/games",
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-        "x-rapidapi-key": apiKey
+        "x-rapidapi-key": process.env.apiKey
       },
       params: {
         // user search input
@@ -18,6 +17,7 @@ const chxCoop = {
     })
       .then(response => {
         console.log(response.data.result);
+        cb(response.data.result);
       })
       .catch(error => {
         console.log(error);
@@ -26,7 +26,7 @@ const chxCoop = {
   // Example seachGames() response:
   // ===============================================================
   //   [
-  //     {title: 'Rise of the Tomb Raider: 20 Year Celebration', platform: 'PS4'},
+  //     { title: 'Rise of the Tomb Raider: 20 Year Celebration', platform: 'PS4'},
   //     { title: 'Rise of the Tomb Raider', platform: 'PC' },
   //     { title: 'Tomb Raider: Definitive Edition', platform: 'PS4' },
   //     { title: 'Tomb Raider', platform: 'PC' },
@@ -41,7 +41,7 @@ const chxCoop = {
   // Loop through responses and display each as search results
   // ===============================================================
 
-  displayGameInfo(apiKey, gameName) {
+  displayGameInfo(gameName, platform, cb) {
     // gameName will need to be reworked if multiple words
 
     axios({
@@ -50,14 +50,15 @@ const chxCoop = {
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-        "x-rapidapi-key": apiKey
+        "x-rapidapi-key": process.env.apiKey
       },
       params: {
-        platform: "pc"
+        platform: `${platform}`
       }
     })
       .then(response => {
         console.log(response.data);
+        cb(response.data.result);
       })
       .catch(error => {
         console.log(error);
