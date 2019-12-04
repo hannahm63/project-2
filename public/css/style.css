@@ -6,7 +6,7 @@ html, form {
 
 .svg-wrapper {
   height: 40px;
-    margin: 0 auto;
+  margin: 0 auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -19,7 +19,6 @@ html, form {
   stroke-dashoffset: -474;
   stroke-width: 8px;
   stroke: #19f6e8;
-
 }
 
 .text {
@@ -51,49 +50,50 @@ html, form {
 }
 
 .logo {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 72px;
-    font-family: 'Black Ops One', cursive;
-
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 72px;
+  font-family: 'Black Ops One', cursive;
 }
+
 #game_input {
-    font-size: 32px;
-    padding: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: 'Roboto Condensed';
+  font-size: 32px;
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Roboto Condensed';
 }
 
-.gamesRow{
-    margin-top: 110px;
-    background: white;
-    height: 300px;
-    width: 540px;
+.gamesRow {
+  margin-top: 110px;
+  background: white;
+  height: 300px;
+  width: 540px;
 }
 
-.gamesRowLast{
-    background: white;
-    height: 300px;
-    width: 540px;
-    margin-top: 110px;
-    margin-bottom: 100px;
+.gamesRowLast {
+  background: white;
+  height: 300px;
+  width: 540px;
+  margin-top: 110px;
+  margin-bottom: 100px;
 }
 
-button { background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-    outline: inherit;
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
