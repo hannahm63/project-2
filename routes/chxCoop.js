@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const chxCoop = {
-  seachGames(userInput, cb) {
+  searchGames(userInput, cb) {
     axios({
       method: "GET",
       url: "https://chicken-coop.p.rapidapi.com/games",
