@@ -1,5 +1,4 @@
-var db = require("../models");
-const dotenv = require("dotenv");
+const db = require("../models");
 const chxCoop = require("./chxCoop");
 
 module.exports = function(app) {
@@ -13,7 +12,27 @@ module.exports = function(app) {
     chxCoop.searchGames(req.params.name, function(data) {
       console.log(data.title);
       res.render("results", { results: data });
-      
+    });
+  });
+
+  app.get("/games/:name/:platform", function(req, res) {
+    let name = req.params.name;
+    let platform = req.params.platform;
+
+    // If game exists in our db, grab all reviews that match that game's id
+    db.Review.findAll({
+      include: [
+        {
+          model: Game,
+          where: {
+            title: name,
+            platform: platform
+          }
+        }
+      ]
+    }).then(function(data) {
+      console.log(data);
+      res.render("results", { results: data });
     });
   });
 
