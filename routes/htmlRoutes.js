@@ -17,6 +17,26 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/games/:name/:platform", function(req, res) {
+    let name = req.params.name;
+    let platform = req.params.platform;
+
+    // If game exists in our db, grab all reviews that match that game's id
+    db.Review.findAll({
+      include: [
+        {
+          model: db.Game,
+          where: {
+            title: name,
+            platform: platform
+          }
+        }
+      ]
+    }).then(function(data) {
+      res.render("results", { results: data });
+    });
+  });
+
   // Get display individual game info
   app.get("/game/:name/:platform", function (req, res) {
     chxCoop.displayGameInfo(req.params.name, req.params.platform, function (data) {
