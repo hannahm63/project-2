@@ -8,7 +8,9 @@ $(document).ready(function() {
 
     console.log(game);
 
-    window.location.href = `/games/${game}`;
+    window.location.href = `/search/${game}`;
+
+    // what to do while waiting for response?
 
     if (game) {
       $("#intro").fadeOut("slow", function() {

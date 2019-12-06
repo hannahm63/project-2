@@ -1,17 +1,8 @@
-var db = require("../models");
+const db = require("../models");
 const dotenv = require("dotenv");
 const chxCoop = require("./chxCoop");
 
 module.exports = function(app) {
-  // Get all examples
-  // app.get("/api/games/:name", function(req, res) {
-  //   chxCoop.searchGames(req.params.name, function(data) {
-  //     console.log(data.title);
-  //     res.render("results", { results: data });
-      
-  //   });
-  // });
-
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {

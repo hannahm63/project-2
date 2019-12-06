@@ -1,7 +1,52 @@
-<div>
-  {{#each results}}
-   
-    <p>{{title}}</p>
-   
-  {{/each}}
-</div>
+<section class="intro pt-1" id="intro">
+
+    <div class="space-invader space-invader-1 classic"></div>
+    <div class="space-invader space-invader-2 classic"></div>
+    <div class="space-invader space-invader-3 classic"></div>
+    <div class="space-invader space-invader-4 classic"></div>
+    <div class="space-invader space-invader-5 classic"></div>
+    <div class="space-invader space-invader-6 classic"></div>
+
+    <div class="space-invader space-invader-7 classic"></div>
+    <div class="space-invader space-invader-8 classic"></div>
+    <div class="space-invader space-invader-9 classic"></div>
+    <div class="space-invader space-invader-10 classic"></div>
+    <div class="space-invader space-invader-11 classic"></div>
+    <div class="space-invader space-invader-12 classic"></div>
+
+    <form method="GET">
+        <div class="container text-center pt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3  pt-5">
+                    <div class="form-group text-light">
+                        <label for="game_input" class="logo">GameOn <i class="fas fa-gamepad"></i></label>
+                        <input class="form-control" type="text" id="game_input" placeholder="Search Games">
+
+                        <div class="svg-wrapper">
+                            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="shape" height="60" width="320" />
+                            </svg>
+                            <Button class="text" id="main_search">SEARCH</button>
+                        </div>
+
+                        <div class="resultsRow">
+                            {{#each results}}
+
+                            <a href="#"><p>{{title}} for {{platform}}</p></a>
+
+                            {{/each}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</section>
+
+<script>
+    AOS.init();
+</script>
+
+<script type="module" src="./"></script>
