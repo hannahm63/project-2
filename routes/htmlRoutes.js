@@ -1,5 +1,4 @@
 const db = require("../models");
-const dotenv = require("dotenv");
 const chxCoop = require("./chxCoop");
 
 module.exports = function (app) {
