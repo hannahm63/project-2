@@ -1,20 +1,27 @@
 const db = require("../models");
-const chxCoop = require("./chxCoop");
 
 module.exports = function(app) {
-  // Get all examples
-  // app.get("/api/games/:name", function(req, res) {
-  //   chxCoop.searchGames(req.params.name, function(data) {
-  //     console.log(data.title);
-  //     res.render("results", { results: data });
-      
-  //   });
-  // });
+  // Create a new review if none exist already
+  app.post("/api/games", function(req, res) {
+    let rating = 5; // req.body.rating;
+    let review = "I like this game!"; // req.body.review;
+    let title = "Mario"; // Use jquery to target some value that has the game name
+    let platform = "Switch"; // Use jquery to target some value that has the platform
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    db.Game.create(
+      {
+        title: title,
+        platform: platform,
+        Review: {
+          comment: review,
+          rating: rating
+        }
+      },
+      {
+        include: Review
+      }
+    ).then(function(newReview) {
+      res.json(newReview);
     });
   });
 

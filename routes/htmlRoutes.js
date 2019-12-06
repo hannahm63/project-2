@@ -23,7 +23,7 @@ module.exports = function(app) {
     db.Review.findAll({
       include: [
         {
-          model: Game,
+          model: db.Game,
           where: {
             title: name,
             platform: platform
@@ -31,7 +31,6 @@ module.exports = function(app) {
         }
       ]
     }).then(function(data) {
-      console.log(data);
       res.render("results", { results: data });
     });
   });
