@@ -97,3 +97,9 @@ button {
     opacity: 1;
   }
 }
+
+.resultsRow {
+  margin-top: 50px;
+  height: 100px;
+  width: 540px;
+}
