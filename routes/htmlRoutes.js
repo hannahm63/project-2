@@ -4,7 +4,7 @@ const chxCoop = require("./chxCoop");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    res.render("index");
+    res.render("game");
   });
 
   // Get search input to display relevant game-platform pairs
