@@ -8,29 +8,32 @@ module.exports = function(app) {
     let title = "Mario"; // Use jquery to target some value that has the game name
     let platform = "Switch"; // Use jquery to target some value that has the platform
 
-    db.Game.create(
-      {
+    db.Game.findOrCreate({
+      where: {
         title: title,
-        platform: platform,
-        Review: {
-          comment: review,
-          rating: rating
-        }
+        platform: platform
       },
-      {
-        include: Review
+      defaults: {
+        title: title,
+        platform: platform
       }
-    ).then(function(newReview) {
-      res.json(newReview);
+    }).then(function(game) {
+      gameId = game[0].dataValues.id;
+      db.Review.create({
+        comment: review,
+        rating: rating,
+        GameId: gameId
+      });
+      res.end();
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
-    });
-  });
+// Delete an example by id
+//   app.delete("/api/examples/:id", function(req, res) {
+//     db.Example.destroy({ where: { id: req.params.id } }).then(function(
+//       dbExample
+//     ) {
+//       res.json(dbExample);
+//     });
+//   });
 };
