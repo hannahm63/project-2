@@ -43,14 +43,17 @@ const chxCoop = {
 
   displayGameInfo(gameName, platform, cb) {
     // gameName will need to be reworked if multiple words
-
+    console.log("display game info");
+    console.log(gameName + "sadlkfjsd");
+    console.log(platform);
+    console.log(cb);
     axios({
       method: "GET",
       url: `https://chicken-coop.p.rapidapi.com/games/${gameName}`,
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-        "x-rapidapi-key": process.env.apiKey
+        "x-rapidapi-key": process.env.MYAPIKEY
       },
       params: {
         platform: `${platform}`
@@ -64,6 +67,7 @@ const chxCoop = {
         console.log(error);
       });
   }
+
   // Example displayGameInfo() response:
   // ===============================================================
   // {
@@ -87,5 +91,4 @@ const chxCoop = {
   // ===============================================================
 };
 
-// export name or method/parentheses?
 module.exports = chxCoop;

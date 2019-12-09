@@ -1,33 +1,27 @@
-$(document).ready(function () {
-  $("#main_search").on("click", function () {
+$(document).ready(function() {
+  $("#main_search").on("click", function() {
     event.preventDefault();
-​
+
     let game = $("#game_input")
       .val()
       .trim();
-​
+
     console.log(game);
-​
-    // let game= [insert concatenation thing here]
-    // Regex probably
-​
+
+    // let concatGame = game.split(game);
+    // console.log(concatGame);
+
     window.location.href = `/search/${game}`;
-​
+
     // what to do while waiting for response?
-​
+
     if (game) {
-      $("#intro").fadeOut("slow", function () {
+      $("#intro").fadeOut("slow", function() {
         //find both queries here with a function:
       });
     }
   });
 });
-
-
-
-
-
-
 
 // // Get references to page elements
 // var $exampleText = $("#example-text");

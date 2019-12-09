@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3  pt-5">
                     <div class="form-group text-light">
-                        <label for="game_input" class="logo">GameOn <i class="fas fa-gamepad"></i></label>
+                        <a href="/"><label for="game_input" class="logo">GameOn <i class="fas fa-gamepad"></i></label></a>
                         <input class="form-control" type="text" id="game_input" placeholder="Search Games">
 
                         <div class="svg-wrapper">
@@ -32,7 +32,7 @@
                         <div class="resultsRow">
                             {{#each results}}
 
-                          <a href="#"><p data-name="{{title}}" data-platform="{{platform}}">{{title}} for {{platform}}</p></a>
+                          <p class="searchResult" data-name="{{title}}" data-platform="{{platform}}">{{title}} for {{platform}}</p>
 
                             {{/each}}
                         </div>
@@ -48,5 +48,3 @@
 <script>
     AOS.init();
 </script>
-
-<script type="module" src="./"></script>
