@@ -1,21 +1,15 @@
 $(document).ready(function() {
-  $("#main_search").on("click", function() {
-    event.preventDefault();
+  $(".searchResult").on("click", function() {
+    let choiceName = this.getAttribute("data-name");
+    console.log(choiceName + "dflksjdfds");
+    const concat = choiceName
+      .replace(/ /gm, "%2520")
+      .replace(/:/gm, "%253A")
+      .replace(/'/gm, "%2527");
+    let choicePlatform = this.getAttribute("data-platform").toLowerCase();
 
-    let game = $("#game_input")
-      .val()
-      .trim();
+    console.log(`${concat} and ${choicePlatform}`);
 
-    console.log(game);
-
-    window.location.href = `/search/${game}`;
-
-    // what to do while waiting for response?
-
-    if (game) {
-      $("#intro").fadeOut("slow", function() {
-        //find both queries here with a function:
-      });
-    }
+    window.location.href = `/game/${concat}/${choicePlatform}`;
   });
 });

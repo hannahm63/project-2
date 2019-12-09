@@ -2,10 +2,12 @@ $(document).ready(function() {
   $("#addreview-btn").on("click", function(event) {
     event.preventDefault();
 
-    console.log('Button clicked!');
+    console.log("Button clicked!");
 
     let newReview = {
-        comment: $("#review-text").val().trim()
+      comment: $("#review-text")
+        .val()
+        .trim()
     };
     console.log(newReview);
 
