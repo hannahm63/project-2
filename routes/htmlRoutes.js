@@ -19,14 +19,14 @@ module.exports = function (app) {
   app.get("/games/:name/:platform", function(req, res) {
     let name = req.params.name;
     let platform = req.params.platform;
+    let bothDatas = [];
 
-    chxCoop.displayGameInfo(name, platform, function(data) {
-      // what if "No result"?
-      console.log(data.title);
-      res.render("game", data);
-    });
+    // chxCoop.displayGameInfo(name, platform, function(data) {
+    //   bothDatas.push(data);
+    //   console.log("ChxCoop Stuff: " + JSON.stringify(bothDatas[0].result));
+    // })
+    // .then()
 
-    // If game exists in our db, grab all reviews that match that game's id
     db.Review.findAll({
       include: [
         {
@@ -37,9 +37,10 @@ module.exports = function (app) {
           }
         }
       ]
-    }).then(function(data) {
-      console.log(data);
-      res.render("game", data);
+    }).then(function(review) {
+      bothDatas.push(JSON.stringify(review[0].dataValues));
+      console.log("bothDatas: " + bothDatas);
+      res.end();
     });
   });
 
@@ -56,5 +57,22 @@ module.exports = function (app) {
   // // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
+  });
+
+};
+
+let dbQuery = function() {
+  db.Review.findAll({
+    include: [
+      {
+        model: db.Game,
+        where: {
+          title: name,
+          platform: platform
+        }
+      }
+    ]
+  }).then(function(review) {
+    return review;
   });
 };
