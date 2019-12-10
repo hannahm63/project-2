@@ -30,16 +30,16 @@
                         </div>
 
                         <div>
-                            <p>{{results.title}}</p>
-                            <p>{{results.releaseDate}}</p>
-                            <p>{{results.description}}</p>
+                            <p>{{result.title}}</p>
+                            <p>{{result.releaseDate}}</p>
+                            <p>{{result.description}}</p>
                             <div>
-                                <p>{{results.genre}}</p>
+                                <p>{{result.genre}}</p>
                             </div>
-                            <img src="{{results.image}}">
-                            <p>{{results.developer}}</p>
-                            <p>{{results.publisher}}</p>
-                            <p>{{results.rating}}</p>
+                            <img src="{{result.image}}">
+                            <p>{{result.developer}}</p>
+                            <p>{{result.publisher}}</p>
+                            <p>{{result.rating}}</p>
                             {{!-- <p>{{results.alsoAvailableOn}}</p> --}}
                         </div>
 
@@ -56,28 +56,28 @@
                                         <div class="container">
                                             <div class="stars">
                                                 <div>
-                                                    <input class="star star-5" id="star-5" type="radio" name="star"
-                                                        data-value="5">
-                                                    <label class="star star-5" for="star-5"></label>
-                                                    <input class="star star-4" id="star-4" type="radio" name="star"
-                                                        data-value="4">
-                                                    <label class="star star-4" for="star-4"></label>
-                                                    <input class="star star-3" id="star-3" type="radio" name="star"
-                                                        data-value="3">
-                                                    <label class="star star-3" for="star-3"></label>
-                                                    <input class="star star-2" id="star-2" type="radio" name="star"
-                                                        data-value="2">
-                                                    <label class="star star-2" for="star-2"></label>
                                                     <input class="star star-1" id="star-1" type="radio" name="star"
-                                                        data-value="1">
+                                                        value="1">
                                                     <label class="star star-1" for="star-1"></label>
+                                                    <input class="star star-2" id="star-2" type="radio" name="star"
+                                                        value="2">
+                                                    <label class="star star-2" for="star-2"></label>
+                                                    <input class="star star-3" id="star-3" type="radio" name="star"
+                                                        value="3">
+                                                    <label class="star star-3" for="star-3"></label>
+                                                    <input class="star star-4" id="star-4" type="radio" name="star"
+                                                        value="4">
+                                                    <label class="star star-4" for="star-4"></label>
+                                                    <input class="star star-5" id="star-5" type="radio" name="star"
+                                                        value="5">
+                                                    <label class="star star-5" for="star-5"></label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="review">Leave a Review!</label>
-                                            <textarea class="form-control" id="review-text" rows="3"
-                                                name="review"></textarea>
+                                            <textarea class="form-control" id="review-text" rows="3" name="review"
+                                                data-title="{{result.title}}" data-platform="{{query}}"></textarea>
                                         </div>
                                         <div class="text-right">
                                             <button type="submit" class="btn btn-primary btn-md" id="addreview-btn">Add

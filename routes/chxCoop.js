@@ -61,7 +61,7 @@ const chxCoop = {
     })
       .then(response => {
         console.log(response.data);
-        cb(response.data.result);
+        cb(response.data);
       })
       .catch(error => {
         console.log(error);

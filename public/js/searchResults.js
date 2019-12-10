@@ -6,10 +6,16 @@ $(document).ready(function() {
       .replace(/ /gm, "%2520")
       .replace(/:/gm, "%253A")
       .replace(/'/gm, "%2527");
+
     let choicePlatform = this.getAttribute("data-platform").toLowerCase();
 
-    console.log(`${concat} and ${choicePlatform}`);
+    const adjustedPf = choicePlatform
+      .replace(/ps4/gm, "playstation-4")
+      .replace(/n64/gm, "nintendo-64")
+      .replace(/xone/gm, "xbox-one");
 
-    window.location.href = `/game/${concat}/${choicePlatform}`;
+    console.log(`${concat} and ${adjustedPf}`);
+
+    window.location.href = `/games/${concat}/${adjustedPf}`;
   });
 });
