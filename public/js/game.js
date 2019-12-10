@@ -7,7 +7,12 @@ $(document).ready(function() {
     let newReview = {
       comment: $("#review-text")
         .val()
-        .trim()
+        .trim(),
+      rating: $("input[name='star']:checked").val(),
+      title: $("#review-text").attr("data-title"),
+      platform: $("#review-text")
+        .attr("data-platform")
+        .split("=")[1]
     };
     console.log(newReview);
 

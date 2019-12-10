@@ -3,12 +3,12 @@ const db = require("../models");
 module.exports = function(app) {
   // Create a new review if none exist already
   app.post("/api/games", function(req, res) {
-    console.log(req.body);
-    let rating = 5; // req.body.rating;
+    let rating = req.body.rating;
     let review = req.body.comment;
-    // console.log(`Review: ${review}`);
-    let title = "Mario"; // Use jquery to target some value that has the game name
-    let platform = "Switch"; // Use jquery to target some value that has the platform
+    let title = req.body.title;
+    console.log(`Title: ${title}`);
+    let platform = req.body.platform;
+    console.log(`Platform: ${platform}`);
 
     db.Game.findOrCreate({
       where: {
