@@ -16,16 +16,9 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/games/:name/:platform", function(req, res) {
+  app.get("/games/:name/:platform", function (req, res) {
     let name = req.params.name;
     let platform = req.params.platform;
-    let bothDatas = [];
-
-    // chxCoop.displayGameInfo(name, platform, function(data) {
-    //   bothDatas.push(data);
-    //   console.log("ChxCoop Stuff: " + JSON.stringify(bothDatas[0].result));
-    // })
-    // .then()
 
     db.Review.findAll({
       include: [
@@ -37,31 +30,42 @@ module.exports = function (app) {
           }
         }
       ]
-    }).then(function(review) {
-      bothDatas.push(JSON.stringify(review[0].dataValues));
-      console.log("bothDatas: " + bothDatas);
-      res.end();
+    }).then(function (review) {
+
+      let dbQueryData = review[0].dataValues;
+
+      chxCoop.displayGameInfo(name, platform, function (data) {
+        let chxCoopData = data;
+        let bothDatas = {
+          dbQueryData: dbQueryData,
+          chxCoopData: chxCoopData
+        };
+        console.log("bothDatas: " + JSON.stringify(bothDatas));
+        console.log("Data type: " + typeof bothDatas);
+
+        res.render("game", bothDatas);
+      });
     });
+
+    // // Get display individual game info
+    // app.get("/games/:name/:platform", function(req, res) {
+    //   chxCoop.displayGameInfo(req.params.name, req.params.platform, function(data) {
+    //     // what if "No result"?
+    //     console.log(data.title);
+    //     res.render("game", data);
+    //   });
+    //   // also need db call
+    // });
+
+    // // Render 404 page for any unmatched routes
+    app.get("*", function (req, res) {
+      res.render("404");
+    });
+
   });
-
-  // // Get display individual game info
-  // app.get("/games/:name/:platform", function(req, res) {
-  //   chxCoop.displayGameInfo(req.params.name, req.params.platform, function(data) {
-  //     // what if "No result"?
-  //     console.log(data.title);
-  //     res.render("game", data);
-  //   });
-  //   // also need db call
-  // });
-
-  // // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
-
 };
 
-let dbQuery = function() {
+let dbQuery = function () {
   db.Review.findAll({
     include: [
       {
@@ -72,7 +76,7 @@ let dbQuery = function() {
         }
       }
     ]
-  }).then(function(review) {
+  }).then(function (review) {
     return review;
   });
 };
