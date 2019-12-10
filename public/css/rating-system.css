@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
-​
-div.stars {
+
+​div.stars {
     width: 270px;
     display: inline-block;
 }
@@ -38,7 +37,7 @@ label.star:hover {
 ​
 label.star:before {
     content: '\f006';
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
 }
 ​
 .rev-box {
