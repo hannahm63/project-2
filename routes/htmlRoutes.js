@@ -31,7 +31,7 @@ module.exports = function (app) {
         }
       ]
     }).then(function (review) {
-
+      console.log("All related reviews: " , review);
       let dbQueryData = review[0].dataValues;
 
       chxCoop.displayGameInfo(name, platform, function (data) {

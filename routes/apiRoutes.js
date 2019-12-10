@@ -26,7 +26,7 @@ module.exports = function(app) {
         rating: rating,
         GameId: gameId
       });
-      res.end();
+      res.redirect(req.originalUrl);
     });
   });
 
