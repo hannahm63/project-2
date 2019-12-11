@@ -53,7 +53,7 @@ const chxCoop = {
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-        "x-rapidapi-key": process.env.MYAPIKEY
+        "x-rapidapi-key": "35f77dbc89mshd4954b2e71eb5dep19de2bjsn38781102f0b2"
       },
       params: {
         platform: `${platform}`
