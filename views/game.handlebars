@@ -30,17 +30,17 @@
                         </div>
 
                         <div>
-                            <p>{{chxCoopData.result.title}}</p>
-                            <p>{{chxCoopData.result.releaseDate}}</p>
-                            <p>{{chxCoopData.result.description}}</p>
-                            <div>
-                                <p>{{chxCoopData.result.genre}}</p>
-                            </div>
                             <img src="{{chxCoopData.result.image}}">
-                            <p>{{chxCoopData.result.developer}}</p>
-                            <p>{{chxCoopData.result.publisher}}</p>
-                            <p>{{chxCoopData.result.rating}}</p>
-                            <p>{{chxCoopData.result.alsoAvailableOn}}</p>
+                            <p>{{chxCoopData.result.title}}</p>
+                            <p><span style="font-weight:bold">Release Date:</span>{{chxCoopData.result.releaseDate}}</p>
+                            <p><span style="font-weight:bold">Description:</span> {{chxCoopData.result.description}}</p>
+                            <div>
+                                <p><span style="font-weight:bold">Genre:</span> {{chxCoopData.result.genre}}</p>
+                            </div>
+                            <p><span style="font-weight:bold">Developer:</span> {{chxCoopData.result.developer}}</p>
+                            <p><span style="font-weight:bold">Publisher:</span> {{chxCoopData.result.publisher}}</p>
+                            <p><span style="font-weight:bold">Rated:</span> {{chxCoopData.result.rating}}</p>
+                            <p><span style="font-weight:bold">Also Available On:</span> {{chxCoopData.result.alsoAvailableOn}}</p>
                         </div>
 
                         <div>
@@ -56,21 +56,21 @@
                                         <div class="container">
                                             <div class="stars">
                                                 <div>
+                                                    <label class="star star-1" for="star-1">1</label>
                                                     <input class="star star-1" id="star-1" type="radio" name="star"
                                                         value="1">
-                                                    <label class="star star-1" for="star-1"></label>
+                                                    <label class="star star-2" for="star-2">2</label>
                                                     <input class="star star-2" id="star-2" type="radio" name="star"
                                                         value="2">
-                                                    <label class="star star-2" for="star-2"></label>
+                                                    <label class="star star-3" for="star-3">3</label>
                                                     <input class="star star-3" id="star-3" type="radio" name="star"
                                                         value="3">
-                                                    <label class="star star-3" for="star-3"></label>
+                                                    <label class="star star-4" for="star-4">4</label>
                                                     <input class="star star-4" id="star-4" type="radio" name="star"
                                                         value="4">
-                                                    <label class="star star-4" for="star-4"></label>
+                                                    <label class="star star-5" for="star-5">5</label>
                                                     <input class="star star-5" id="star-5" type="radio" name="star"
                                                         value="5">
-                                                    <label class="star star-5" for="star-5"></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,9 +88,9 @@
                             </div>
                         </div>
 
-                        <div>
-                            <p>{{dbQueryData.comment}}</p>
-                            <p>{{dbQueryData.rating}}</p>
+                        <div style="border: 2px solid white; padding: 10px 0px">
+                            <p><span style="font-weight:bold">Review:</span> {{dbQueryData.comment}}</p>
+                            <p><span style="font-weight:bold">Rating:</span> {{dbQueryData.rating}} Stars!</p>
                         </div>
 
                     </div>
